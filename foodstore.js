@@ -22,6 +22,7 @@ function createXmlHttpRequestObject(){
        else
        	{
        		return xmlHttp;
+       		alert ("xmlHttp"+xmlHttp);
        		
        	}
 
@@ -31,7 +32,6 @@ function createXmlHttpRequestObject(){
        if(xmlHttp.readyState==0 || xmlHttp.readyState==4)
        {
          food=encodeURIComponent(document.getElementById("food").value);
-         alert (food);
          xmlHttp.open("GET","foodstore.php?food"+food,true);
          xmlHttp.onreadystatechange = handleServerResponse;
          xmlHttp.send(null);
